@@ -1,0 +1,32 @@
+[
+  {
+    "name": "John Doe",
+    "position": "Web Developer",
+    "photo": "https://randomuser.me/api/portraits/men/1.jpg",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam"
+  },
+  {
+    "name": "Jane Smith",
+    "position": "UX Designer",
+    "photo": "https://randomuser.me/api/portraits/women/2.jpg",
+    "text": "Pellentesque nec lacus elit. Pellentesque convallis nisi ac augue pharetra eu tristique neque consequat. Curabitur in libero ut massa volutpat convallis."
+  },
+  {
+    "name": "Bob Johnson",
+    "position": "Software Engineer",
+    "photo": "https://randomuser.me/api/portraits/men/3.jpg",
+    "text": "Suspendisse cursus tortor eu elit. Phasellus sapien sem, convallis quis vehicula ac, varius ut nulla. Nulla facilisi."
+  },
+  {
+    "name": "Alice Brown",
+    "position": "Product Manager",
+    "photo": "https://randomuser.me/api/portraits/women/4.jpg",
+    "text": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Nulla facilisi."
+  },
+  {
+    "name": "Mike White",
+    "position": "Marketing Specialist",
+    "photo": "https://randomuser.me/api/portraits/men/5.jpg",
+    "text": "Maecenas in magna eu elit venenatis consequat. Fusce varius mi eu turpis bibendum, id tempus justo vehicula. Nunc tristique, metus eu auctor tincidunt, felis odio aliquet libero, in tincidunt lectus elit eu turpis."
+  }
+]

@@ -13,3 +13,4 @@ This is the main repository for all of the projects in this Challenge. Here I do
 |   #   | Project        | Live Demo     |
 | :---: | -------------- | ------------- |
 |  01   | HoverBoard | [Live Demo](https://100days100projects-day-1.netlify.app/) |
+|  02  | Testimonial | [Live Demo](https://100days100projects-day-2.netlify.app/) |
