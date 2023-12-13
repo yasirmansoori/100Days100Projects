@@ -12,7 +12,7 @@ function Checkout() {
   // Handler for promo code form submission
   const handleCode = (event) => {
     event.preventDefault();
-    if (["FOLLOW", "follow", "Follow"].includes(promoCode)) {
+    if (["FOLLOW ME", "follow me", "Follow Me"].includes(promoCode)) {
       setDiscount(5);
       setTotal(15);
       setCode("Code Applied");
@@ -31,6 +31,16 @@ function Checkout() {
     event.preventDefault();
     setIsFormSubmitted(true);
     console.log("Form submitted!");
+  };
+
+  const handleCheck = (event) => {
+    const isChecked = event.target.checked;
+    const shipping = document.getElementById("shipping");
+    if (isChecked) {
+      shipping.classList.add("d-none");
+    } else {
+      shipping.classList.remove("d-none");
+    }
   };
 
   // Redirect to success page if the form is submitted
@@ -187,7 +197,7 @@ function Checkout() {
                 </div>
                 <div className="col-12">
                   <label htmlFor="address2" className="form-label">
-                    Address 2{" "}
+                    Address 2
                     <span className="text-body-secondary">(Optional)</span>
                   </label>
                   <input
@@ -214,7 +224,34 @@ function Checkout() {
                   </label>
                   <select className="form-select" id="state" required="">
                     <option value="">Choose...</option>
+                    <option>Andhra Pradesh</option>
+                    <option>Arunachal Pradesh</option>
+                    <option>Assam</option>
+                    <option>Bihar</option>
+                    <option>Chhattisgarh</option>
+                    <option>Goa</option>
+                    <option>Gujarat</option>
+                    <option>Haryana</option>
+                    <option>Himachal Pradesh</option>
+                    <option>Jharkhand</option>
+                    <option>Karnataka</option>
+                    <option>Kerala</option>
+                    <option>Madhya Pradesh</option>
+                    <option>Maharashtra</option>
+                    <option>Manipur</option>
+                    <option>Meghalaya</option>
+                    <option>Mizoram</option>
+                    <option>Nagaland</option>
+                    <option>Odisha</option>
+                    <option>Punjab</option>
                     <option>Rajasthan</option>
+                    <option>Sikkim</option>
+                    <option>Tamil Nadu</option>
+                    <option>Telangana</option>
+                    <option>Tripura</option>
+                    <option>Uttar Pradesh</option>
+                    <option>Uttarakhand</option>
+                    <option>West Bengal</option>
                   </select>
                   <div className="invalid-feedback">
                     Please provide a valid state.
@@ -234,18 +271,117 @@ function Checkout() {
                   <div className="invalid-feedback">Zip code required.</div>
                 </div>
               </div>
+
               <hr className="my-4" />
-              <div className="form-check">
+              <h4 className="mb-3">Shipping address</h4>
+
+              <div className="form-check my-2">
                 <input
                   type="checkbox"
                   className="form-check-input"
                   id="same-address"
+                  defaultChecked={true}
+                  onChange={handleCheck}
                 />
-                <label className="form-check-label" htmlFor="same-address">
+                <label className="form-check-label " htmlFor="same-address">
                   Shipping address is the same as my billing address
                 </label>
               </div>
-              <div className="form-check">
+
+              <div className="row g-3 d-none" id="shipping">
+                <div className="col-12">
+                  <label htmlFor="address" className="form-label">
+                    Shipping Address
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="address"
+                    placeholder="1234 Main St"
+                    required=""
+                  />
+                  <div className="invalid-feedback">
+                    Please enter your shipping address.
+                  </div>
+                </div>
+                <div className="col-12">
+                  <label htmlFor="address2" className="form-label">
+                    Address 2
+                    <span className="text-body-secondary">(Optional)</span>
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="address2"
+                    placeholder="Apartment or suite"
+                  />
+                </div>
+                <div className="col-md-5">
+                  <label htmlFor="country" className="form-label">
+                    Country
+                  </label>
+                  <select className="form-select" id="country" required="">
+                    <option value="">India</option>
+                  </select>
+                  <div className="invalid-feedback">
+                    Please select a valid country.
+                  </div>
+                </div>
+                <div className="col-md-4">
+                  <label htmlFor="state" className="form-label">
+                    State
+                  </label>
+                  <select className="form-select" id="state" required="">
+                    <option value="">Choose...</option>
+                    <option>Andhra Pradesh</option>
+                    <option>Arunachal Pradesh</option>
+                    <option>Assam</option>
+                    <option>Bihar</option>
+                    <option>Chhattisgarh</option>
+                    <option>Goa</option>
+                    <option>Gujarat</option>
+                    <option>Haryana</option>
+                    <option>Himachal Pradesh</option>
+                    <option>Jharkhand</option>
+                    <option>Karnataka</option>
+                    <option>Kerala</option>
+                    <option>Madhya Pradesh</option>
+                    <option>Maharashtra</option>
+                    <option>Manipur</option>
+                    <option>Meghalaya</option>
+                    <option>Mizoram</option>
+                    <option>Nagaland</option>
+                    <option>Odisha</option>
+                    <option>Punjab</option>
+                    <option>Rajasthan</option>
+                    <option>Sikkim</option>
+                    <option>Tamil Nadu</option>
+                    <option>Telangana</option>
+                    <option>Tripura</option>
+                    <option>Uttar Pradesh</option>
+                    <option>Uttarakhand</option>
+                    <option>West Bengal</option>
+                  </select>
+                  <div className="invalid-feedback">
+                    Please provide a valid state.
+                  </div>
+                </div>
+                <div className="col-md-3">
+                  <label htmlFor="zip" className="form-label">
+                    Zip
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="zip"
+                    placeholder=""
+                    required=""
+                  />
+                  <div className="invalid-feedback">Zip code required.</div>
+                </div>
+              </div>
+
+              <div className="form-check my-2">
                 <input
                   type="checkbox"
                   className="form-check-input"
