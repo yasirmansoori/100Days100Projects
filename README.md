@@ -12,8 +12,10 @@ This is the main repository for all of the projects in this Challenge. Here I do
 
 |   #   | Project                 | Live Demo                                                  |
 | :---: | ----------------------- | ---------------------------------------------------------- |
+|  00   | All Projects            | [Main Site](https://100days100projects-all.netlify.app/)   |
 |  01   | HoverBoard              | [Live Demo](https://100days100projects-day-1.netlify.app/) |
 |  02   | Testimonial             | [Live Demo](https://100days100projects-day-2.netlify.app/) |
 |  03   | Login UI                | [Live Demo](https://100days100projects-day-3.netlify.app/) |
 |  04   | Weather UI              | [Live Demo](https://100days100projects-day-4.netlify.app/) |
 |  05   | Color Palette Generator | [Live Demo](https://100days100projects-day-5.netlify.app/) |
+|  06   | Checkout Page           | [Live Demo](https://100days100projects-day-6.netlify.app/) |
