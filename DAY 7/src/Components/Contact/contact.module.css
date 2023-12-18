@@ -1,0 +1,246 @@
+.outer {
+  display: grid;
+  width: 50%;
+  height: 85%;
+  margin: 10px 0px;
+  grid-template-columns: 1fr .7fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 3% 2%;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "first second"
+    "first third";
+}
+
+.first {
+  grid-area: first;
+  background-color: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 25px;
+  transform: translateX(0px);
+  animation: bubblePopFirst 0.8s ease-in-out 0s, left 0.8s ease-in-out 0.8s;
+  z-index: 1;
+}
+
+.second {
+  grid-area: second;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 25px;
+  opacity: 1;
+  animation: bubblePop 1s ease-out, opacity 1s ease-out 1s;
+}
+
+.third {
+  grid-area: third;
+  background-color: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  opacity: 1;
+  animation: bubblePop 1s ease-out, opacity 1s ease-out 1s;
+}
+
+.third div {
+  background-color: #fafafa;
+  border-radius: 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 20px 20px;
+}
+
+.next {
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  right: 0px;
+  display: none;
+}
+
+.next>svg {
+  background-color: #FF5B01;
+  color: white;
+  position: relative;
+  top: -10px;
+  right: -10px;
+}
+
+.first:hover,
+.second:hover,
+.third:hover {
+  transform: scale(1.01);
+  transition: transform 0.1s ease-in-out;
+}
+
+@keyframes bubblePopFirst {
+  0% {
+    transform: scale(0);
+    transform: translateX(200px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.05);
+    transform: translateX(200px);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1);
+    transform: translateX(200px);
+    opacity: 1;
+  }
+
+}
+
+@keyframes left {
+  0% {
+    transform: translateX(200px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes bubblePop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+small {
+  color: #FF5B01;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0px;
+}
+
+p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding: 0px;
+  color: grey;
+}
+
+textarea {
+  resize: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+svg {
+  padding: 8px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .third, .second {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .outer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.3fr 0.7fr;
+    gap: 0% 5%;
+    width: 80%;
+    height: fit-content;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "first first"
+      "first first";
+  }
+
+  .first {
+    grid-area: first;
+    animation: bubblePopFirst 1s ease-in-out 0s;
+  }
+
+  .next {
+    display: block;
+  }
+
+  @keyframes bubblePopFirst {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+
+    50% {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  small {
+    color: #FF5B01;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0px;
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0px;
+    color: grey;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 30px 20px;
+  }
+
+}

@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F5F7FA;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  .app {
+    align-items: center;
+  }
+}
