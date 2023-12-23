@@ -19,4 +19,5 @@ This is the main repository for all of the projects in this Challenge. Here I do
 |  04   | Weather UI              | [Live Demo](https://100days100projects-day-4.netlify.app/) |
 |  05   | Color Palette Generator | [Live Demo](https://100days100projects-day-5.netlify.app/) |
 |  06   | Checkout Page           | [Live Demo](https://100days100projects-day-6.netlify.app/) |
-|  07   | Contact Page           | [Live Demo](https://100days100projects-day-7.netlify.app/) |
+|  07   | Contact Page            | [Live Demo](https://100days100projects-day-7.netlify.app/) |
+|  08   | Tic Tac Toe             | [Live Demo](https://100days100projects-day-8.netlify.app/) |
