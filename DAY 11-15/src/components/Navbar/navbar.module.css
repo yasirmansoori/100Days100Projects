@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Rubik+Broken+Fax&family=Rubik+Bubbles&family=Space+Grotesk:wght@300;400;500&display=swap');
+
+.navbar {
+  background-color: #0E1428;
+}
+
+.scroller_bar {
+  display: block;
+}
+
+span {
+  font-family: 'space grotesk', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.scroller_bar_mobile {
+  display: none;
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .scroller_bar {
+    display: none;
+  }
+
+  span {
+    font-size: 1.2rem;
+  }
+
+  .scroller_bar_mobile {
+    display: block;
+  }
+}
